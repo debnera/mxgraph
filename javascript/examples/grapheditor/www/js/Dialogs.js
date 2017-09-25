@@ -1067,6 +1067,8 @@ var ExportDialog = function(editorUi)
 	var imageFormatSelect = document.createElement('select');
 	imageFormatSelect.style.width = '180px';
 
+	/*
+
 	var pngOption = document.createElement('option');
 	pngOption.setAttribute('value', 'png');
 	mxUtils.write(pngOption, mxResources.get('formatPng'));
@@ -1096,6 +1098,7 @@ var ExportDialog = function(editorUi)
 	mxUtils.write(svgOption, mxResources.get('formatSvg'));
 	imageFormatSelect.appendChild(svgOption);
 
+	*/
 	if (ExportDialog.showXmlOption)
 	{
 		var xmlOption = document.createElement('option');
@@ -1473,7 +1476,7 @@ ExportDialog.saveLocalFile = function(editorUi, data, filename, format)
 		//	encodeURIComponent(filename) + '&format=' + format);
 		//req.simulate(document, '_blank');
 		//var blob = new Blob([data], {type: "text/xml;charset=utf-8"});
-		download(new Blob([data]), "dlTextBlob.xml", "text/xml");
+		download(new Blob([data]), filename, "text/xml");
   	//saveAs(blob, "graph" + ".xml");
 		console.log(data)
 	}
