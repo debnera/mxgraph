@@ -1178,6 +1178,7 @@ Sidebar.prototype.addUmlPalette = function(expand)
 
 			return sb.createVertexTemplateFromCells([cell], cell.geometry.width, cell.geometry.height, 'Class');
 		}),
+
 		this.addEntry(dt + 'section subsection', function()
 		{
 			var cell = new mxCell('Classname', new mxGeometry(0, 0, 140, 110),
@@ -1189,6 +1190,8 @@ Sidebar.prototype.addUmlPalette = function(expand)
 
 			return sb.createVertexTemplateFromCells([cell], cell.geometry.width, cell.geometry.height, 'Class 2');
 		}),
+
+		/*
 		this.addEntry(dt + 'item member method function variable field attribute label', function()
 		{
 			return sb.createVertexTemplateFromCells([sb.cloneCell(field, '+ item: attribute')], field.geometry.width, field.geometry.height, 'Item 1');
@@ -1201,6 +1204,8 @@ Sidebar.prototype.addUmlPalette = function(expand)
 
 			return sb.createVertexTemplateFromCells([cell], cell.geometry.width, cell.geometry.height, 'Item 2');
 		}),
+
+
 		this.addEntry(dt + 'divider hline line separator', function()
 		{
 			return sb.createVertexTemplateFromCells([divider.clone()], divider.geometry.width, divider.geometry.height, 'Divider');
@@ -1477,6 +1482,7 @@ Sidebar.prototype.addUmlPalette = function(expand)
 
 			return sb.createEdgeTemplateFromCells([edge], 80, 0, 'Return');
 		}),
+		*/
 		this.addEntry('uml relation', function()
 		{
 			var edge = new mxCell('name', new mxGeometry(0, 0, 0, 0), 'endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;');
